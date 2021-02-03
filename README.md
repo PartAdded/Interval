@@ -151,25 +151,30 @@ Button.TextWrapped = true
 
 -- Scripts:
 
-local function XKIW_fake_script() -- TempFolder.PickupAll 
+local function ZJQK_fake_script() -- TempFolder.PickupAll 
 	local script = Instance.new('LocalScript', TempFolder)
 
 	function getall()
 		wait(3)
-		for i,v in pairs(game:GetService("Workspace").Collectable:GetChildren()) do
-			if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("UnionOperation") then
-				v.CFrame = game.Players.LocalPlayer.Character.PrimaryPart.CFrame
+		while _G.a == true do
+			wait()
+			for i,v in pairs(game:GetService("Workspace").Collectable:GetChildren()) do
+				wait()
+				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("UnionOperation") then
+					v.CFrame = game.Players.LocalPlayer.Character.PrimaryPart.CFrame
+				end
 			end
 		end
 	end
 	
 	script.Parent.Parent.Pages.Page1.Button.MouseButton1Click:Connect(function()
+		_G.a = not _G.a
 		getall()
 	end)
 	
 end
-coroutine.wrap(XKIW_fake_script)()
-local function ETLZVI_fake_script() -- TempFolder.Setup 
+coroutine.wrap(ZJQK_fake_script)()
+local function MVNT_fake_script() -- TempFolder.Setup 
 	local script = Instance.new('LocalScript', TempFolder)
 
 	local Gui = script.Parent.Parent
@@ -184,4 +189,4 @@ local function ETLZVI_fake_script() -- TempFolder.Setup
 		Gui:Destroy()
 	end)
 end
-coroutine.wrap(ETLZVI_fake_script)()
+coroutine.wrap(MVNT_fake_script)()
