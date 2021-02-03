@@ -140,8 +140,8 @@ Page1.Parent = Pages
 Button.Name = "Button"
 Button.Parent = Page1
 Button.BackgroundColor3 = Color3.fromRGB(188, 217, 133)
-Button.Position = UDim2.new(0.155578896, 0, 0.133712724, 0)
-Button.Size = UDim2.new(0, 200, 0, 97)
+Button.Position = UDim2.new(0.100261956, 0, 0.133712724, 0)
+Button.Size = UDim2.new(0.800000012, 0, 0.699999988, 0)
 Button.Font = Enum.Font.SourceSans
 Button.Text = "Collect All"
 Button.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -151,7 +151,7 @@ Button.TextWrapped = true
 
 -- Scripts:
 
-local function ZJQK_fake_script() -- TempFolder.PickupAll 
+local function WLYRUKR_fake_script() -- TempFolder.PickupAll 
 	local script = Instance.new('LocalScript', TempFolder)
 
 	function getall()
@@ -168,13 +168,17 @@ local function ZJQK_fake_script() -- TempFolder.PickupAll
 	end
 	
 	script.Parent.Parent.Pages.Page1.Button.MouseButton1Click:Connect(function()
-		_G.a = not _G.a
-		getall()
+		if _G.a == false then
+			_G.a = true
+			getall()
+		else
+			_G.a = false
+		end
 	end)
 	
 end
-coroutine.wrap(ZJQK_fake_script)()
-local function MVNT_fake_script() -- TempFolder.Setup 
+coroutine.wrap(WLYRUKR_fake_script)()
+local function EHWMXI_fake_script() -- TempFolder.Setup 
 	local script = Instance.new('LocalScript', TempFolder)
 
 	local Gui = script.Parent.Parent
@@ -189,4 +193,4 @@ local function MVNT_fake_script() -- TempFolder.Setup
 		Gui:Destroy()
 	end)
 end
-coroutine.wrap(MVNT_fake_script)()
+coroutine.wrap(EHWMXI_fake_script)()
