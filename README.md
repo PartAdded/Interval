@@ -65,8 +65,8 @@ Mainframe.Name = "Mainframe"
 Mainframe.Parent = Frame
 Mainframe.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 Mainframe.BorderSizePixel = 0
-Mainframe.Position = UDim2.new(-0.000788857811, 0, 0.962560534, 0)
-Mainframe.Size = UDim2.new(1.04219699, 0, 11.3597584, 0)
+Mainframe.Position = UDim2.new(0, 0, 0.962559879, 0)
+Mainframe.Size = UDim2.new(1.04140806, 0, 11.3597584, 0)
 
 Detail.Name = "Detail"
 Detail.Parent = Mainframe
@@ -151,7 +151,7 @@ Button.TextWrapped = true
 
 -- Scripts:
 
-local function WLYRUKR_fake_script() -- TempFolder.PickupAll 
+local function RVQY_fake_script() -- TempFolder.PickupAll 
 	local script = Instance.new('LocalScript', TempFolder)
 
 	function getall()
@@ -167,6 +167,8 @@ local function WLYRUKR_fake_script() -- TempFolder.PickupAll
 		end
 	end
 	
+	_G.a = false
+	
 	script.Parent.Parent.Pages.Page1.Button.MouseButton1Click:Connect(function()
 		if _G.a == false then
 			_G.a = true
@@ -177,8 +179,8 @@ local function WLYRUKR_fake_script() -- TempFolder.PickupAll
 	end)
 	
 end
-coroutine.wrap(WLYRUKR_fake_script)()
-local function EHWMXI_fake_script() -- TempFolder.Setup 
+coroutine.wrap(RVQY_fake_script)()
+local function PMQTULY_fake_script() -- TempFolder.Setup 
 	local script = Instance.new('LocalScript', TempFolder)
 
 	local Gui = script.Parent.Parent
@@ -193,4 +195,4 @@ local function EHWMXI_fake_script() -- TempFolder.Setup
 		Gui:Destroy()
 	end)
 end
-coroutine.wrap(EHWMXI_fake_script)()
+coroutine.wrap(PMQTULY_fake_script)()
